@@ -1,0 +1,33 @@
+﻿<Window x:Class="TestApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <DataTemplate x:Key="DataTemplate1">
+            <Grid/>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Button Content="Login" HorizontalAlignment="Left" Height="23" Margin="8" VerticalAlignment="Top" Width="74" x:Name="loginButton" Click="loginButton_Click"/>
+            <TextBlock x:Name="userNameLabel" Margin="8" />
+        </StackPanel>
+        <Grid x:Name="signedInUI" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="160"/>
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="itemsList" Grid.Column="0" MinWidth="120" SelectionChanged="itemsList_SelectionChanged" MouseDoubleClick="itemsList_MouseDoubleClick" />
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="16,0,0,0" Grid.Column="1">
+                <Button Content="Get Root" x:Name="getRootButton" Click="getRootButton_Click" Margin="8" />
+                <Button Content="All Photos" x:Name="allPhotosButton" Margin="8" Click="allPhotosButton_Click" />
+                <Button Content="Delete" x:Name="deleteButton" Margin="8" Click="deleteButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
