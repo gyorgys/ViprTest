@@ -5452,15 +5452,15 @@ namespace oneDrive
             
                     <Property Name=""driveType"" Type=""Edm.String"" />
             
-                    <Property Name=""owner"" Type=""global::oneDrive.identitySet"" />
+                    <Property Name=""owner"" Type=""oneDrive.identitySet"" />
             
-                    <Property Name=""quota"" Type=""global::oneDrive.quota"" />
+                    <Property Name=""quota"" Type=""oneDrive.quota"" />
             
-                    <NavigationProperty Name=""items"" Type=""Collection(global::oneDrive.item)"" ContainsTarget=""true"" />
+                    <NavigationProperty Name=""items"" Type=""Collection(oneDrive.item)"" ContainsTarget=""true"" />
             
-                    <NavigationProperty Name=""shared"" Type=""Collection(global::oneDrive.item)"" ContainsTarget=""true"" />
+                    <NavigationProperty Name=""shared"" Type=""Collection(oneDrive.item)"" ContainsTarget=""true"" />
             
-                    <NavigationProperty Name=""special"" Type=""Collection(global::oneDrive.item)"" ContainsTarget=""true"" />
+                    <NavigationProperty Name=""special"" Type=""Collection(oneDrive.item)"" ContainsTarget=""true"" />
             
                   </EntityType>
             
@@ -5474,7 +5474,7 @@ namespace oneDrive
             
                     <Property Name=""content"" Type=""Edm.Stream"" />
             
-                    <Property Name=""createdBy"" Type=""global::oneDrive.identitySet"" />
+                    <Property Name=""createdBy"" Type=""oneDrive.identitySet"" />
             
                     <Property Name=""createdDateTime"" Type=""Edm.DateTimeOffset"" />
             
@@ -5484,41 +5484,41 @@ namespace oneDrive
             
                     <Property Name=""id"" Type=""Edm.String"" Nullable=""false"" />
             
-                    <Property Name=""lastModifiedBy"" Type=""global::oneDrive.identitySet"" />
+                    <Property Name=""lastModifiedBy"" Type=""oneDrive.identitySet"" />
             
                     <Property Name=""lastModifiedDateTime"" Type=""Edm.DateTimeOffset"" />
             
                     <Property Name=""name"" Type=""Edm.String"" />
             
-                    <Property Name=""parentReference"" Type=""global::oneDrive.itemReference"" />
+                    <Property Name=""parentReference"" Type=""oneDrive.itemReference"" />
             
                     <Property Name=""size"" Type=""Edm.Int64"" />
             
                     <Property Name=""webUrl"" Type=""Edm.String"" />
             
-                    <Property Name=""audio"" Type=""global::oneDrive.audio"" />
+                    <Property Name=""audio"" Type=""oneDrive.audio"" />
             
-                    <Property Name=""deleted"" Type=""global::oneDrive.deleted"" />
+                    <Property Name=""deleted"" Type=""oneDrive.deleted"" />
             
-                    <Property Name=""file"" Type=""global::oneDrive.file"" />
+                    <Property Name=""file"" Type=""oneDrive.file"" />
             
-                    <Property Name=""folder"" Type=""global::oneDrive.folder"" />
+                    <Property Name=""folder"" Type=""oneDrive.folder"" />
             
-                    <Property Name=""image"" Type=""global::oneDrive.image"" />
+                    <Property Name=""image"" Type=""oneDrive.image"" />
             
-                    <Property Name=""location"" Type=""global::oneDrive.location"" />
+                    <Property Name=""location"" Type=""oneDrive.location"" />
             
-                    <Property Name=""photo"" Type=""global::oneDrive.photo"" />
+                    <Property Name=""photo"" Type=""oneDrive.photo"" />
             
-                    <Property Name=""specialFolder"" Type=""global::oneDrive.specialFolder"" />
+                    <Property Name=""specialFolder"" Type=""oneDrive.specialFolder"" />
             
-                    <Property Name=""video"" Type=""global::oneDrive.video"" />
+                    <Property Name=""video"" Type=""oneDrive.video"" />
             
-                    <NavigationProperty Name=""children"" Type=""Collection(global::oneDrive.item)"" ContainsTarget=""true"" />
+                    <NavigationProperty Name=""children"" Type=""Collection(oneDrive.item)"" ContainsTarget=""true"" />
             
-                    <NavigationProperty Name=""permissions"" Type=""Collection(global::oneDrive.permission)"" ContainsTarget=""true"" />
+                    <NavigationProperty Name=""permissions"" Type=""Collection(oneDrive.permission)"" ContainsTarget=""true"" />
             
-                    <NavigationProperty Name=""thumbnails"" Type=""Collection(global::oneDrive.thumbnailSet)"" ContainsTarget=""true"" />
+                    <NavigationProperty Name=""thumbnails"" Type=""Collection(oneDrive.thumbnailSet)"" ContainsTarget=""true"" />
             
                   </EntityType>
             
@@ -5594,7 +5594,7 @@ namespace oneDrive
             
                   <ComplexType Name=""file"">
             
-                    <Property Name=""hashes"" Type=""global::oneDrive.hashes"" />
+                    <Property Name=""hashes"" Type=""oneDrive.hashes"" />
             
                     <Property Name=""mimeType"" Type=""Edm.String"" />
             
@@ -5640,15 +5640,15 @@ namespace oneDrive
             
                     </Key>
             
-                    <Property Name=""grantedTo"" Type=""global::oneDrive.identitySet"" />
+                    <Property Name=""grantedTo"" Type=""oneDrive.identitySet"" />
             
                     <Property Name=""id"" Type=""Edm.String"" Nullable=""false"" />
             
-                    <Property Name=""invitation"" Type=""global::oneDrive.sharingInvitation"" />
+                    <Property Name=""invitation"" Type=""oneDrive.sharingInvitation"" />
             
-                    <Property Name=""inheritedFrom"" Type=""global::oneDrive.itemReference"" />
+                    <Property Name=""inheritedFrom"" Type=""oneDrive.itemReference"" />
             
-                    <Property Name=""link"" Type=""global::oneDrive.sharingLink"" />
+                    <Property Name=""link"" Type=""oneDrive.sharingLink"" />
             
                     <Property Name=""roles"" Type=""Collection(Edm.String)"" />
             
@@ -5698,7 +5698,7 @@ namespace oneDrive
             
                   <ComplexType Name=""sharingLink"">
             
-                    <Property Name=""application"" Type=""global::oneDrive.identity"" />
+                    <Property Name=""application"" Type=""oneDrive.identity"" />
             
                     <Property Name=""token"" Type=""Edm.String"" />
             
@@ -5728,11 +5728,11 @@ namespace oneDrive
             
                   <ComplexType Name=""identitySet"" OpenType=""true"">
             
-                    <Property Name=""application"" Type=""global::oneDrive.identity"" />
+                    <Property Name=""application"" Type=""oneDrive.identity"" />
             
-                    <Property Name=""device"" Type=""global::oneDrive.identity"" />
+                    <Property Name=""device"" Type=""oneDrive.identity"" />
             
-                    <Property Name=""user"" Type=""global::oneDrive.identity"" />
+                    <Property Name=""user"" Type=""oneDrive.identity"" />
             
                   </ComplexType>
             
@@ -5754,13 +5754,13 @@ namespace oneDrive
             
                     <Property Name=""id"" Type=""Edm.String"" Nullable=""false"" />
             
-                    <Property Name=""large"" Type=""global::oneDrive.thumbnail"" />
+                    <Property Name=""large"" Type=""oneDrive.thumbnail"" />
             
-                    <Property Name=""medium"" Type=""global::oneDrive.thumbnail"" />
+                    <Property Name=""medium"" Type=""oneDrive.thumbnail"" />
             
-                    <Property Name=""small"" Type=""global::oneDrive.thumbnail"" />
+                    <Property Name=""small"" Type=""oneDrive.thumbnail"" />
             
-                    <Property Name=""source"" Type=""global::oneDrive.thumbnail"" />
+                    <Property Name=""source"" Type=""oneDrive.thumbnail"" />
             
                   </EntityType>
             
@@ -5778,7 +5778,7 @@ namespace oneDrive
             
                   <EntityContainer Name=""oneDrive"">
             
-                    <EntitySet Name=""drives"" EntityType=""global::oneDrive.drive"" />
+                    <EntitySet Name=""drives"" EntityType=""oneDrive.drive"" />
             
                   </EntityContainer>
             
@@ -5788,57 +5788,57 @@ namespace oneDrive
             
                   <Function Name=""allPhotos"" IsBound=""true"">
             
-                    <Parameter Name=""bindingParameter"" Type=""global::oneDrive.drive"" Nullable=""false"" />
+                    <Parameter Name=""bindingParameter"" Type=""oneDrive.drive"" Nullable=""false"" />
             
-                    <ReturnType Type=""Collection(global::oneDrive.item)"" Nullable=""false"" />
+                    <ReturnType Type=""Collection(oneDrive.item)"" Nullable=""false"" />
             
                   </Function>
             
                   <Function Name=""allPhotos"" IsBound=""true"">
             
-                    <Parameter Name=""bindingParameter"" Type=""global::oneDrive.item"" Nullable=""false"" />
+                    <Parameter Name=""bindingParameter"" Type=""oneDrive.item"" Nullable=""false"" />
             
-                    <ReturnType Type=""Collection(global::oneDrive.item)"" Nullable=""false"" />
-            
-                  </Function>
-            
-                  <Function Name=""changes"" IsBound=""true"">
-            
-                    <Parameter Name=""bindingParameter"" Type=""global::oneDrive.item"" Nullable=""false"" />
-            
-                    <ReturnType Type=""Collection(global::oneDrive.item)"" Nullable=""false"" />
+                    <ReturnType Type=""Collection(oneDrive.item)"" Nullable=""false"" />
             
                   </Function>
             
                   <Function Name=""changes"" IsBound=""true"">
             
-                    <Parameter Name=""bindingParameter"" Type=""global::oneDrive.drive"" Nullable=""false"" />
+                    <Parameter Name=""bindingParameter"" Type=""oneDrive.item"" Nullable=""false"" />
             
-                    <ReturnType Type=""Collection(global::oneDrive.item)"" Nullable=""false"" />
+                    <ReturnType Type=""Collection(oneDrive.item)"" Nullable=""false"" />
+            
+                  </Function>
+            
+                  <Function Name=""changes"" IsBound=""true"">
+            
+                    <Parameter Name=""bindingParameter"" Type=""oneDrive.drive"" Nullable=""false"" />
+            
+                    <ReturnType Type=""Collection(oneDrive.item)"" Nullable=""false"" />
             
                   </Function>
             
                   <Function Name=""recent"" IsBound=""true"">
             
-                    <Parameter Name=""bindingParameter"" Type=""global::oneDrive.drive"" Nullable=""false"" />
+                    <Parameter Name=""bindingParameter"" Type=""oneDrive.drive"" Nullable=""false"" />
             
-                    <ReturnType Type=""Collection(global::oneDrive.item)"" Nullable=""false"" />
+                    <ReturnType Type=""Collection(oneDrive.item)"" Nullable=""false"" />
             
                   </Function>
             
                   <Function Name=""search"" IsBound=""true"">
             
-                    <Parameter Name=""bindingParameter"" Type=""global::oneDrive.item"" Nullable=""false"" />
+                    <Parameter Name=""bindingParameter"" Type=""oneDrive.item"" Nullable=""false"" />
             
-                    <ReturnType Type=""Collection(global::oneDrive.item)"" Nullable=""false"" />
+                    <ReturnType Type=""Collection(oneDrive.item)"" Nullable=""false"" />
             
                   </Function>
             
                   <Function Name=""sharedWithMe"" IsBound=""true"">
             
-                    <Parameter Name=""bindingParameter"" Type=""global::oneDrive.drive"" Nullable=""false"" />
+                    <Parameter Name=""bindingParameter"" Type=""oneDrive.drive"" Nullable=""false"" />
             
-                    <ReturnType Type=""Collection(global::oneDrive.item)"" Nullable=""false"" />
+                    <ReturnType Type=""Collection(oneDrive.item)"" Nullable=""false"" />
             
                   </Function>
             
@@ -5848,11 +5848,11 @@ namespace oneDrive
             
                   <Action Name=""createSession"" IsBound=""true"">
             
-                    <Parameter Name=""bindingParameter"" Type=""global::oneDrive.item"" Nullable=""false"" />
+                    <Parameter Name=""bindingParameter"" Type=""oneDrive.item"" Nullable=""false"" />
             
-                    <Parameter Name=""item"" Type=""global::oneDrive.chunkedUploadSessionDescriptor"" />
+                    <Parameter Name=""item"" Type=""oneDrive.chunkedUploadSessionDescriptor"" />
             
-                    <ReturnType Type=""global::oneDrive.uploadSession"" Nullable=""false"" />
+                    <ReturnType Type=""oneDrive.uploadSession"" Nullable=""false"" />
             
                   </Action>
             
@@ -5862,23 +5862,23 @@ namespace oneDrive
             
                   <Action Name=""copy"" IsBound=""true"">
             
-                    <Parameter Name=""bindingParameter"" Type=""global::oneDrive.item"" Nullable=""false"" />
+                    <Parameter Name=""bindingParameter"" Type=""oneDrive.item"" Nullable=""false"" />
             
-                    <Parameter Name=""parentReference"" Type=""global::oneDrive.itemReference"" />
+                    <Parameter Name=""parentReference"" Type=""oneDrive.itemReference"" />
             
                     <Parameter Name=""name"" Type=""Edm.String"" />
             
-                    <ReturnType Type=""global::oneDrive.item"" Nullable=""false"" />
+                    <ReturnType Type=""oneDrive.item"" Nullable=""false"" />
             
                   </Action>
             
                   <Action Name=""createLink"" IsBound=""true"">
             
-                    <Parameter Name=""bindingParameter"" Type=""global::oneDrive.item"" Nullable=""false"" />
+                    <Parameter Name=""bindingParameter"" Type=""oneDrive.item"" Nullable=""false"" />
             
                     <Parameter Name=""type"" Type=""Edm.String"" Nullable=""false"" />
             
-                    <ReturnType Type=""global::oneDrive.permission"" Nullable=""false"" />
+                    <ReturnType Type=""oneDrive.permission"" Nullable=""false"" />
             
                   </Action>
             
@@ -5886,13 +5886,13 @@ namespace oneDrive
             
                 <Schema Namespace=""content"" xmlns=""http://docs.oasis-open.org/odata/ns/edm"">
             
-                  <Term Name=""sourceUrl"" Type=""Edm.String"" AppliesTo=""global::oneDrive.item"">
+                  <Term Name=""sourceUrl"" Type=""Edm.String"" AppliesTo=""oneDrive.item"">
             
                     <Annotation Term=""Org.OData.Core.V1.LongDescription"" String=""When used on a PUT or POST call to an Item, causes the item's content to be copied from the URL specified in the attribute."" />
             
                   </Term>
             
-                  <Term Name=""downloadUrl"" Type=""Edm.String"" AppliesTo=""global::oneDrive.item"">
+                  <Term Name=""downloadUrl"" Type=""Edm.String"" AppliesTo=""oneDrive.item"">
             
                     <Annotation Term=""Org.OData.Core.V1.LongDescription"" String=""Returned with an Item that contains content to provide a URL for directly accessing said content."" />
             
@@ -5902,7 +5902,7 @@ namespace oneDrive
             
                 <Schema Namespace=""name"" xmlns=""http://docs.oasis-open.org/odata/ns/edm"">
             
-                  <Term Name=""conflictBehavior"" Type=""Edm.String"" AppliesTo=""global::oneDrive.item"">
+                  <Term Name=""conflictBehavior"" Type=""Edm.String"" AppliesTo=""oneDrive.item"">
             
                     <Annotation Term=""Org.OData.Core.V1.LongDescription"" String=""When used on a PUT or POST call that sets metadata and content, specifies what to do if an existing file with the same name already exists. Possible values are 'fail' (default), 'replace', or 'rename'."" />
             

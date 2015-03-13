@@ -73,17 +73,17 @@ namespace TestApp
             signedInUI.Visibility = isSignedIn ? Visibility.Visible : Visibility.Collapsed;
         }
 
-        private async Task<string> getTokenAsync()
+        private Task<string> getTokenAsync()
         {
-            return signInResult.AccessToken;
+            return Task<string>.Factory.StartNew(() => { 
+                return signInResult.AccessToken; 
+            });
         }
 
-        private async void getRootButton_Click(object sender, RoutedEventArgs e)
+        private void getRootButton_Click(object sender, RoutedEventArgs e)
         {
             itemsList.Items.Clear();
-            //var rootItems = await oneDriveClient.drive.items["root"].children.Select( item => new { item.name, item.id, item.folder, item.photo }).ExecuteAsync();
-
-            var rootItems = oneDriveClient.drive.items["root"].children;
+            IReadOnlyQueryableSet<Iitem> rootItems = oneDriveClient.drive.items["root"].children.Expand("thumbnails");
 
             LoadItemsPage(rootItems.ExecuteAsync());
 
@@ -103,17 +103,20 @@ namespace TestApp
             }
         }
 
-        private async void LoadItemsPage(Task<IEnumerable<Iitem>> task)
-        {
-            IEnumerable<Iitem> items = await task;
-            foreach (Iitem item in items)
-            {
-                itemsList.Items.Add(new OneDriveListItem(item));
-            }
-        }
-
         private void itemsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            var selectedItem = (OneDriveListItem)itemsList.SelectedItem;
+            if (selectedItem != null)
+            {
+                Iitem item = selectedItem.Item;
+                if (item.thumbnails != null && item.thumbnails.CurrentPage.Count > 0)
+                {
+                    thumbnailImg.Visibility = Visibility.Visible;
+                    thumbnailImg.Source = new BitmapImage( new Uri(item.thumbnails.CurrentPage[0].medium.url) );
+                } else {
+                    thumbnailImg.Visibility = Visibility.Hidden;
+                }
+            }
 
         }
 
@@ -125,7 +128,7 @@ namespace TestApp
             if (item.folder != null && item.folder.childCount > 0)
             {
                 itemsList.Items.Clear();
-                IitemCollection childItems = oneDriveClient.drive.items[item.id].children;
+                IReadOnlyQueryableSet<Iitem> childItems = oneDriveClient.drive.items[item.id].children.Expand("thumbnails");
                 LoadItemsPage(childItems.ExecuteAsync());
 
             }

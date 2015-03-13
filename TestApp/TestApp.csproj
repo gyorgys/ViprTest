@@ -38,8 +38,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\GitHub\Vipr\src\ProxyExtensions\Microsoft.OData.ProxyExtensions\bin\Debug\Microsoft.OData.ProxyExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="MSAAuthControl">
-      <HintPath>..\..\MSAAuthToken\MSAAuthControl\bin\Debug\MSAAuthControl.dll</HintPath>
+    <Reference Include="MSAAuthControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\MSAAuthControl.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -106,6 +107,9 @@
       <Project>{5f59a067-1738-4f5f-8da2-15067f87ef08}</Project>
       <Name>OneDriveViprSdk</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libs\MSAAuthControl.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

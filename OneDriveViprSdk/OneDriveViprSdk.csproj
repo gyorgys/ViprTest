@@ -48,9 +48,6 @@
     <Reference Include="Microsoft.OData.ProxyExtensions">
       <HintPath>..\..\..\..\GitHub\Vipr\src\ProxyExtensions\Microsoft.OData.ProxyExtensions\bin\Debug\Microsoft.OData.ProxyExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.OneDrive.RestProxy">
-      <HintPath>..\..\..\..\GitHub\Vipr\src\ProxyExtensions\Microsoft.OneDrive.RestProxy\bin\Debug\Microsoft.OneDrive.RestProxy.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
